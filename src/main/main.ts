@@ -36,7 +36,7 @@ export function onBeforeQuit() {
  * macOS.
  */
 export function onWindowsAllClosed() {
-  // On OS X it is common for applications and their menu bar
+  // On OS X it is common for applications and their menu bars
   // to stay active until the user quits explicitly with Cmd + Q
   if (process.platform !== "darwin") {
     app.quit();
@@ -60,7 +60,7 @@ export function main() {
   // Set the app's name
   app.setName("windows95");
 
-  // Launch
+  // Launcher
   app.on("ready", onReady);
   app.on("before-quit", onBeforeQuit);
   app.on("window-all-closed", onWindowsAllClosed);
